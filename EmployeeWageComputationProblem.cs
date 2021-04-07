@@ -1,27 +1,32 @@
 ﻿using System;
 
 namespace PracticeProblem
-{       /* Check Employee is 
-           Present or Absent
-           - Use ((RANDOM)) for Attendance Check
+{       /*UC2.:- Calculate Daily 
+                 Employee Wage  
+                 - Assume Wage per Hour is 20 
+                 - Assume Full Day Hour is 8
         */
     class EmployeeWageComputationProblem
     {
         static void Main(string[] args)
         {
-            int IS_FULL_TIME = 1;
+            int PRESENT = 1;
+            int EMP_RATE_PER_HOUR = 20;
+            int emphrs = 0;
+            int empWage = 0;
             Random random = new Random();
             int EmpCheack = random.Next(0, 2);
-            if (EmpCheack == 1)
+            if (EmpCheack == PRESENT)
             {
-                Console.WriteLine("Employee Is Present");
+                emphrs = 8;
 
             }
             else
             {
-                Console.WriteLine("Employe Is Absent");
+                emphrs = 0;
             }
-
+            empWage = EMP_RATE_PER_HOUR * emphrs;
+            Console.WriteLine("Employe Wage Per Day:- "+ empWage);
         }
     }
 }
