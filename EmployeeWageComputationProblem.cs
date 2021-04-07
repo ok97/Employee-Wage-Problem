@@ -9,7 +9,7 @@ namespace PracticeProblem
         public const int FULL_TIME = 1;     //Constant variable
         public const int PART_TIME = 2;
         public const int EMP_RATE_PER_HOUR = 20;
-        public const int NUM_OF_WORKING_DAYS = 30;
+        public const int NUM_OF_WORKING_DAYS = 20;
 
 
         public static void Main(string[] args)      //Main method
