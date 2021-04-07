@@ -9,7 +9,7 @@ namespace PracticeProblem
     {
         static void Main(string[] args)
         {
-            int IS_FULL_TIME = 1;
+            int PRESENT = 1;
             Random random = new Random();
             int EmpCheack = random.Next(0, 2);
             if (EmpCheack == 1)
