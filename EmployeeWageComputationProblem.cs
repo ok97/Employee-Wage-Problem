@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace PracticeProblem
-{      /* UC6.:- Calculate Wages till a condition of total working hours or days is reached for a month 
-          - Assume 100 hours and 20 days
-       */
-    class EmployeeWageComputationProblem
+namespace Employee_Wage_Computation_Problem
+{
+    /* UC7:- Refactor the Code to write a Class Method to Compute Employee Wage */ 
+    class UC7RefactortheCode
     {
         public const int FULL_TIME = 1;     //Constant variable
         public const int PART_TIME = 2;
@@ -12,8 +15,8 @@ namespace PracticeProblem
         public const int NUM_OF_WORKING_DAYS = 20;
         public const int MAX_WORKING_HRS = 100;
         public const int MAX_WORKING_DAYS = 20;
-
-        public static void Main(string[] args)      //Main method
+        
+        public static int ComputeEmployeeWage()
         {
             int emphrs = 0;
             int empWage = 0;
@@ -48,6 +51,15 @@ namespace PracticeProblem
             Console.WriteLine("Total Employe Month Wage :- " + totalempwage);
             Console.WriteLine("Employee wage for " + workingDays + " days " + totalempwage);
             Console.WriteLine("Working hours " + hrs);
+            return totalempwage;
+
         }
+        public static void Main(string[] args)
+        {
+            UC7RefactortheCode.ComputeEmployeeWage();
+        }
+
+
+
     }
 }
