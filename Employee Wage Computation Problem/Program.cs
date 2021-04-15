@@ -17,6 +17,7 @@ namespace Employee_Wage_Computation_Problem
                 "7. UC7:- Refactor the Code to write a Class Method to Compute Employee Wage\n"+
                 "8. UC8:- Ability to compute EmployeeWageformultiple companies\n"+
                 "9. UC9:- Ability to save the Total Wage for Each Company\n"+
+                "10. UC10 Ability to manage Employee Wage of multiple companies\n"+
                 "Enter Your Choice:- ") ;
             int Number = Convert.ToInt32(Console.ReadLine());
             switch (Number)
@@ -84,6 +85,13 @@ namespace Employee_Wage_Computation_Problem
                     Console.WriteLine(budget.toString());
                     Console.ReadLine();
                     break;
+                case 10:
+                    EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
+                    empWageBuilder.addComapnyEmpWage("Dmart", 20, 2, 10);
+                    empWageBuilder.addComapnyEmpWage("Relicance", 10, 4, 20);
+                    empWageBuilder.ComputeEmployeeWage();
+                    break;
+
 
             }
             //UC1PresentAbsent PA = new UC1PresentAbsent();
