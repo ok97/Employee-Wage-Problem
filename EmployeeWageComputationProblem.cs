@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Employee_Wage_Computation_Problem
+namespace PracticeProblem
 {           /* UC8:- Ability to compute EmployeeWageformultiple companies */
-    class UC8EmployeeWageformultiplecompanies
+    class EmployeeWageComputationProblem
     {
         public const int FULL_TIME = 1;     //Constant variable
         public const int PART_TIME = 2;
