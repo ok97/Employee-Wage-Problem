@@ -5,18 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Employee_Wage_Computation_Problem
-{
-    /* UC7:- Refactor the Code to write a Class Method to Compute Employee Wage */ 
-    class UC7RefactortheCode
+{           /* UC8:- Ability to compute EmployeeWageformultiple companies */
+    class UC8EmployeeWageformultiplecompanies
     {
         public const int FULL_TIME = 1;     //Constant variable
         public const int PART_TIME = 2;
-        public const int EMP_RATE_PER_HOUR = 20;
-        public const int NUM_OF_WORKING_DAYS = 20;
-        public const int MAX_WORKING_HRS = 100;
-        public const int MAX_WORKING_DAYS = 20;
-        
-        public static int ComputeEmployeeWage()
+        // public const int EMP_RATE_PER_HOUR = 20;
+        //public const int MAX_WORKING_HRS = 100;
+        // public const int MAX_WORKING_DAYS = 20;
+        public static int ComputeEmployeeWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
         {
             int emphrs = 0;
             int empWage = 0;
@@ -24,7 +21,7 @@ namespace Employee_Wage_Computation_Problem
             int hrs = 0;
             int workingDays = 1;
             Random random = new Random();       //Random Class
-            while (hrs < MAX_WORKING_HRS && workingDays <= MAX_WORKING_DAYS)
+            while (hrs < empRatePerHour && numOfWorkingDays <= maxHoursPerMonth)
             // for (int Day = 0; Day < NUM_OF_WORKING_DAYS; Day++)
             {
 
@@ -43,23 +40,26 @@ namespace Employee_Wage_Computation_Problem
                         break;
                 }
 
-                empWage = EMP_RATE_PER_HOUR * emphrs;            // Calculate empWage
+                // Calculate empWage
                 hrs += emphrs;                                           //Display empwage
                 totalempwage = totalempwage + empWage;      //Calculate total employe month wage
+                empWage = empRatePerHour * emphrs;
             }
+
+            Console.WriteLine($"Toatal Emp wage for company:- {company} is {totalempwage}");
             Console.WriteLine("Employe Wage Per Day :- " + empWage);
-            Console.WriteLine("Total Employe Month Wage :- " + totalempwage);
-            Console.WriteLine("Employee wage for " + workingDays + " days " + totalempwage);
-            Console.WriteLine("Working hours " + hrs);
+            //Console.WriteLine("Total Employe Month Wage :- " + totalempwage);
+            //  Console.WriteLine("Employee wage for " + workingDays + " days " + totalempwage);
+            Console.WriteLine("Working hours " + hrs + "\n");
             return totalempwage;
 
         }
-        public static void Main(string[] args)
+        static void Main(String[] args)
         {
-            UC7RefactortheCode.ComputeEmployeeWage();
+            ComputeEmployeeWage("Dmart", 20, 2, 10);
+            ComputeEmployeeWage("Walmart", 20, 20, 50);
+            ComputeEmployeeWage("Freshmart ", 10, 6, 40);
+            ComputeEmployeeWage("Budget Foods", 20, 4, 10);
         }
-
-
-
     }
 }
