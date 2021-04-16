@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Employee_Wage_Computation_Problem
+namespace PracticeProblem
 {
     /* UC7:- Refactor the Code to write a Class Method to Compute Employee Wage */ 
     class UC7RefactortheCode
