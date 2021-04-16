@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace PracticeProblem
 {
     /* UC7:- Refactor the Code to write a Class Method to Compute Employee Wage */ 
-    class UC7RefactortheCode
+    class EmployeeWageComputationProblem
     {
         public const int FULL_TIME = 1;     //Constant variable
         public const int PART_TIME = 2;
@@ -56,7 +56,7 @@ namespace PracticeProblem
         }
         public static void Main(string[] args)
         {
-            UC7RefactortheCode.ComputeEmployeeWage();
+            EmployeeWageComputationProblem.ComputeEmployeeWage();
         }
 
 
